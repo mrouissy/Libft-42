@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrouissy <mrouissy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mohamedaminerouissy <mohamedaminerouiss    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 17:07:50 by mrouissy          #+#    #+#             */
-/*   Updated: 2024/10/29 09:49:51 by mrouissy         ###   ########.fr       */
+/*   Updated: 2024/10/31 09:30:41 by mohamedamin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
