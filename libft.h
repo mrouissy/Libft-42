@@ -6,7 +6,7 @@
 /*   By: mrouissy <mrouissy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:11:56 by mrouissy          #+#    #+#             */
-/*   Updated: 2024/10/30 15:48:40 by mrouissy         ###   ########.fr       */
+/*   Updated: 2024/10/31 17:41:51 by mrouissy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,12 @@ size_t	ft_strlen(const char *str);
 char 	*ft_substr(char const *s, unsigned int start,size_t len);
 char	*ft_strnstr(const char *str, const char *tofind, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strdup(const char *source);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
+//char	*ft_itoa(int n);
 char	ft_tolower(int c);
 char	ft_toupper(int c);
 

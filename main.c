@@ -6,7 +6,7 @@
 /*   By: mohamedaminerouissy <mohamedaminerouiss    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 15:47:25 by mrouissy          #+#    #+#             */
-/*   Updated: 2024/10/31 09:20:58 by mohamedamin      ###   ########.fr       */
+/*   Updated: 2024/10/30 22:15:49 by mohamedamin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,17 +50,17 @@
 //     return 0;
 // }
 // strjoin
-int main()
-{
-    char s1[] ="moh";
-    char s2[] = "amed";
-    char *ptr = ft_strjoin(s1,s2);
-    printf("%s",ptr);
-}
 // int main()
 // {
-//     char s1[] ="aaMohamedaa";
-//     char *ptr = ft_strtrim(s1,"d");
-//     printf("\n %s \n",ptr);
-//     free(ptr);
+//     char s1[] ="";
+//     char s2[] = "mohamed";
+//     char *ptr = ft_strjoin(s1,s2);
+//     printf("%s",ptr);
 // }
+int main()
+{
+    char s1[] ="aaMohamedaa";
+    char *ptr = ft_strtrim(s1,"d");
+    printf("\n %s \n",ptr);
+    free(ptr);
+}
