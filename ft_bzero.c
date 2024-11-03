@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrouissy <mrouissy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mohamedaminerouissy <mohamedaminerouiss    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 10:01:46 by mrouissy          #+#    #+#             */
-/*   Updated: 2024/10/29 09:14:04 by mrouissy         ###   ########.fr       */
+/*   Updated: 2024/11/03 22:09:19 by mohamedamin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,6 @@ void	ft_bzero(void *str, size_t n)
 
 	buf = (char *)str;
 	i = 0;
-	while (buf[i] && i < n)
+	while (i < n)
 		buf[i++] = 0;
 }

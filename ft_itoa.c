@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrouissy <mrouissy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mohamedaminerouissy <mohamedaminerouiss    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 17:35:08 by mrouissy          #+#    #+#             */
-/*   Updated: 2024/11/03 13:41:21 by mrouissy         ###   ########.fr       */
+/*   Updated: 2024/11/03 21:15:53 by mohamedamin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ static size_t	intlen(int n)
 {
 	size_t	len;
 
+	len = 0;
 	if (n > 0)
 	{
-		len = 0;
 		while (n > 0)
 		{
 			n /= 10;
@@ -72,6 +72,7 @@ char	*ft_itoa(int n)
 {
 	char	*ptr;
 
+	ptr = 0;
 	if (n == -2147483648)
 	{
 		ptr = alloc(11);

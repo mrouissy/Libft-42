@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrouissy <mrouissy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mohamedaminerouissy <mohamedaminerouiss    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 10:28:44 by mrouissy          #+#    #+#             */
-/*   Updated: 2024/11/03 13:58:45 by mrouissy         ###   ########.fr       */
+/*   Updated: 2024/11/03 21:26:43 by mohamedamin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,18 +91,3 @@ char	**ft_split(const char *s, char c)
 	return (res);
 }
 
-// int main()
-// {
-// 	char str[] = "mo,Am,ro";
-// 	char sep = ',';
-// 	char **words = ft_split(str, sep);
-
-// 	for (size_t i = 0; words[i]; i++)
-// 	{
-// 		printf("%s\n", words[i]);
-// 		free(words[i]);
-// 	}
-// 	free(words);
-
-// 	return 0;
-// }

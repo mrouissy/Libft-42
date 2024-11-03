@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrouissy <mrouissy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mohamedaminerouissy <mohamedaminerouiss    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 22:25:20 by mrouissy          #+#    #+#             */
-/*   Updated: 2024/10/30 17:06:16 by mrouissy         ###   ########.fr       */
+/*   Updated: 2024/11/03 22:06:15 by mohamedamin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,11 @@ char	*ft_strrchr(const char *str, int c)
 	buf = (unsigned char *)str;
 	while (buf[i])
 		i++;
-	while (buf[i] != c)
+	while (i >= 0)
+	{
+		if(buf[i] == (unsigned char)c)
+			return ((char *)str + i);
 		i--;
-	if (buf[i] == c)
-		return ((char *)str + i);
+	}
 	return (0);
 }
