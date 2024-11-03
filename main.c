@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mohamedaminerouissy <mohamedaminerouiss    +#+  +:+       +#+        */
+/*   By: mrouissy <mrouissy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 15:47:25 by mrouissy          #+#    #+#             */
-/*   Updated: 2024/10/30 22:15:49 by mohamedamin      ###   ########.fr       */
+/*   Updated: 2024/11/03 13:54:09 by mrouissy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@
 //     printf("%p \n",ft_memmove(dest+2,dest ,6));
 //     printf("%s \n",dest);
 // }
-//substr
+// substr
 // int main ()
 // {
 //     char str[] = "Mohamed";
@@ -57,10 +57,25 @@
 //     char *ptr = ft_strjoin(s1,s2);
 //     printf("%s",ptr);
 // }
-int main()
-{
-    char s1[] ="aaMohamedaa";
-    char *ptr = ft_strtrim(s1,"d");
-    printf("\n %s \n",ptr);
-    free(ptr);
-}
+
+// int main()
+// {
+//     char s1[] ="aaMohamedaa";
+//     char *ptr = ft_strtrim(s1,"d");
+//     printf("\n %s \n",ptr);
+//     free(ptr);
+// }
+
+// static char	ft_upper(unsigned int i, char c)
+// {
+// 	(void)i;
+// 	char	cc = ft_toupper(c);
+// 	return (cc);
+// }
+// int main()
+// {
+// 	char string[] = "mohamed";
+// 	char *newstr = ft_strmapi(string, ft_upper);
+// 	printf("%s \n", newstr);
+// 	printf("\n %s", string);
+// }

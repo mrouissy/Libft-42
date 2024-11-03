@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrouissy <mrouissy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 17:19:43 by mrouissy          #+#    #+#             */
-/*   Updated: 2024/11/02 11:33:11 by mrouissy         ###   ########.fr       */
+/*   Created: 2024/11/03 11:30:58 by mrouissy          #+#    #+#             */
+/*   Updated: 2024/11/03 13:57:57 by mrouissy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_toupper(int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	k;
+	char	*num;
 
-	if (c >= 'a' && c <= 'z')
-		k = c - 32 ;
-	else
-		k = c;
-	return (k);
+	num = ft_itoa(n);
+	ft_putstr_fd(num, fd);
 }

@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrouissy <mrouissy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/22 17:19:43 by mrouissy          #+#    #+#             */
-/*   Updated: 2024/11/02 11:33:11 by mrouissy         ###   ########.fr       */
+/*   Created: 2024/11/03 10:42:35 by mrouissy          #+#    #+#             */
+/*   Updated: 2024/11/03 13:57:25 by mrouissy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	ft_toupper(int c)
+void	ft_putchar_fd(char c, int fd)
 {
-	char	k;
-
-	if (c >= 'a' && c <= 'z')
-		k = c - 32 ;
-	else
-		k = c;
-	return (k);
+	write (fd, &c, 1);
 }
