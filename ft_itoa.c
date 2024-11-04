@@ -6,7 +6,7 @@
 /*   By: mohamedaminerouissy <mohamedaminerouiss    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 17:35:08 by mrouissy          #+#    #+#             */
-/*   Updated: 2024/11/03 21:15:53 by mohamedamin      ###   ########.fr       */
+/*   Updated: 2024/11/04 01:43:10 by mohamedamin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@ static size_t	intlen(int n)
 {
 	size_t	len;
 
-	len = 0;
-	if (n > 0)
+	if(n > 0)
+		len = 0;
+	else
+		len = 1;
+	while (n)
 	{
-		while (n > 0)
-		{
-			n /= 10;
-			len++;
-		}
+		n /= 10;
+		len++;
 	}
 	return (len);
 }
@@ -41,17 +41,15 @@ static char	*alloc(size_t len)
 static char	*ifpos(int n, size_t memlen, char sign)
 {
 	char	*res;
-	size_t	len;
-	int		num;
 
-	len = memlen;
-	res = alloc(len);
-	res[len] = '\0';
-	num = n;
-	while (len > 0)
+	res = alloc(memlen);
+	if (!res)
+		return (0);
+	res[memlen] = '\0';
+	while (memlen > 0)
 	{
-		res[--len] = num % 10 + '0';
-		num /= 10;
+		res[--memlen] = n % 10 + '0';
+		n /= 10;
 	}
 	if (sign == '-')
 		res[0] = '-';
@@ -60,12 +58,7 @@ static char	*ifpos(int n, size_t memlen, char sign)
 
 static char	*ifneg(int n)
 {
-	char	*res;
-	int		posn;
-
-	posn = n * (-1);
-	res = ifpos(posn, intlen(posn) + 1, '-');
-	return (res);
+	return ifpos(-n, intlen(-n) + 1, '-');
 }
 
 char	*ft_itoa(int n)
@@ -76,8 +69,8 @@ char	*ft_itoa(int n)
 	if (n == -2147483648)
 	{
 		ptr = alloc(11);
-		ptr = "-2147483648";
-		return (ptr);
+		if(ptr)
+			ft_strlcpy(ptr,"-2147483648",11);
 	}
 	else if (n > 0)
 	{
@@ -86,12 +79,13 @@ char	*ft_itoa(int n)
 	else if (n == 0)
 	{
 		ptr = malloc(2);
-		ptr[0] = '0';
-		ptr[1] = '\0';
+		if(ptr)
+		{
+			ptr[0] = '0';
+			ptr[1] = '\0';
+		}
 	}
 	else if (n < 0)
-	{
 		ptr = ifneg(n);
-	}
 	return (ptr);
 }

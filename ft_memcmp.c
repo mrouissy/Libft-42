@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrouissy <mrouissy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mohamedaminerouissy <mohamedaminerouiss    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 21:00:25 by mrouissy          #+#    #+#             */
-/*   Updated: 2024/10/29 09:44:06 by mrouissy         ###   ########.fr       */
+/*   Updated: 2024/11/04 00:11:09 by mohamedamin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,11 @@ int	ft_memcmp(const void *str1, const void *str2, size_t size)
 	buf1 = (unsigned char *)str1;
 	buf2 = (unsigned char *)str2;
 	i = 0;
-	while (buf1[i] && buf1[i] == buf2[i] && i < size)
+	while (i < size)
+	{
+		if (buf1[i] != buf2[i])
+			return buf1[i] - buf2[i];
 		i++;
-	return (buf1[i] - buf2[i]);
+	}
+	return (0);
 }

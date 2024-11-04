@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrouissy <mrouissy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mohamedaminerouissy <mohamedaminerouiss    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 11:15:18 by mrouissy          #+#    #+#             */
-/*   Updated: 2024/10/29 15:09:39 by mrouissy         ###   ########.fr       */
+/*   Updated: 2024/11/04 00:42:34 by mohamedamin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,14 @@ char	*ft_strnstr(const char *str, const char *tofind, size_t len)
 	find = (char *)tofind;
 	if (!find[j])
 		return (big);
-	while (big[i] && i + j <= len)
+	while (big[i] && i <= len)
 	{
-		while (big[i + j] == find[j] && big[i + j])
+		j = 0;
+		while (big[i + j] == find[j] && big[i + j] && (i + j) < len)
 			j++;
 		if (!find[j])
 			return (big + i);
-		j = 0;
+
 		i++;
 	}
 	return (0);
