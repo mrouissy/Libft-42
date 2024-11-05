@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mohamedaminerouissy <mohamedaminerouiss    +#+  +:+       +#+        */
+/*   By: mrouissy <mrouissy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:11:56 by mrouissy          #+#    #+#             */
-/*   Updated: 2024/11/04 01:12:28 by mohamedamin      ###   ########.fr       */
+/*   Updated: 2024/11/04 21:24:30 by mrouissy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+typedef struct	s_list
+{
+	void	*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_memcmp(const void *str1, const void *str2, size_t size);
 int		ft_strncmp(const char *str, const char *str1, size_t n);
@@ -55,5 +61,10 @@ char	*ft_strrchr(const char *str, int c);
 char	*ft_itoa(int n);
 char	ft_tolower(int c);
 char	ft_toupper(int c);
+
+// Bonus list
+void	ft_lstadd_front(t_list **lst, t_list *new);
+int		ft_lstsize(t_list *lst);
+t_list	*ft_lstnew(void *content);
 
 #endif

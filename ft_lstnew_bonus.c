@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mrouissy <mrouissy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 21:00:25 by mrouissy          #+#    #+#             */
-/*   Updated: 2024/11/04 22:04:55 by mrouissy         ###   ########.fr       */
+/*   Created: 2024/11/04 14:32:02 by mrouissy          #+#    #+#             */
+/*   Updated: 2024/11/04 14:44:10 by mrouissy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *str1, const void *str2, size_t size)
+t_list *ft_lstnew(void *content)
 {
-	unsigned char	*buf1;
-	unsigned char	*buf2;
-	size_t			i;
+	t_list *head;
 
-	buf1 = (unsigned char *)str1;
-	buf2 = (unsigned char *)str2;
-	i = 0;
-	while (i < size)
-	{
-		if (buf1[i] != buf2[i])
-			return buf1[i] - buf2[i];
-		i++;
-	}
-	return (0);
+	head = 0;
+	head = (t_list *) malloc(sizeof(t_list));
+	if (!head)
+		return (0);
+	head -> content =content;
+	head -> next = 0;
+	return (head);
 }

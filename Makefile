@@ -1,6 +1,6 @@
 NAME = libft.a
 
-C = gcc
+C = cc
 
 FLAG = -Wall -Wextra -Werror -I.
 
@@ -40,9 +40,14 @@ SRC =	main.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c \
 		ft_itoa.c\
-		ft_split.c\
+		ft_split.c
 
-OBJ = $(SRC:.c=.o)
+bonus = ft_lstadd_front_bonus.c\
+		ft_lstnew_bonus.c\
+		ft_lstsize_bonus.c\
+		main.c\
+
+OBJ = $(bonus:.c=.o)
 
 all: $(NAME)
 

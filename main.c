@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mohamedaminerouissy <mohamedaminerouiss    +#+  +:+       +#+        */
+/*   By: mrouissy <mrouissy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 15:47:25 by mrouissy          #+#    #+#             */
-/*   Updated: 2024/11/03 21:26:55 by mohamedamin      ###   ########.fr       */
+/*   Updated: 2024/11/04 22:13:54 by mrouissy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,16 +83,61 @@
 //     free(ptr);
 // }
 
-static char	ft_upper(unsigned int i, char c)
-{
-	(void)i;
-	char	cc = ft_toupper(c);
-	return (cc);
-}
+// static char	ft_upper(unsigned int i, char c)
+// {
+// 	(void)i;
+// 	char	cc = ft_toupper(c);
+// 	return (cc);
+// }
+// int main()
+// {
+// 	char string[] = "mohamed";
+// 	char *newstr = ft_strmapi(string, ft_upper);
+// 	printf("%s \n", newstr);
+// 	printf("\n %s", string);
+// }
+
+// int main()
+// {
+// 	t_list *ptr = 0 ;
+// 	t_list *head;
+
+// 	ptr = ft_lstnew("medd");
+// 	head = ptr;
+
+// 	head -> next = ft_lstnew("amine");
+// 	head = head -> next;
+
+// 	head -> next = ft_lstnew("rouissy");
+// 	head = head -> next;
+
+// 	head = ptr;
+// 	while (head)
+// 	{
+// 		printf("%s \n",(char *)head -> content);
+// 		head = head ->next;
+// 	}
+
+
+// }
+
 int main()
 {
-	char string[] = "mohamed";
-	char *newstr = ft_strmapi(string, ft_upper);
-	printf("%s \n", newstr);
-	printf("\n %s", string);
+    t_list *head = ft_lstnew("medd");
+    ft_lstadd_front(&head, ft_lstnew("amine"));
+    ft_lstadd_front(&head, ft_lstnew("rouissy"));
+    ft_lstadd_front(&head, ft_lstnew("Mohamed"));
+
+    t_list *current = head;
+	int i = 0;
+	i = ft_lstsize(head);
+    while (current)
+    {
+        printf("%s \n", (char *)current->content);
+        current = current->next;
+    }
+	printf("%d",i);
+
+    return 0;
 }
+
