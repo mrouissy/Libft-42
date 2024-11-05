@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrouissy <mrouissy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mohamedaminerouissy <mohamedaminerouiss    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 15:47:25 by mrouissy          #+#    #+#             */
-/*   Updated: 2024/11/04 22:13:54 by mrouissy         ###   ########.fr       */
+/*   Updated: 2024/11/05 13:49:24 by mohamedamin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,23 +121,27 @@
 
 // }
 
+// int main()
+// {
+//     t_list *head = ft_lstnew("medd");
+//     ft_lstadd_front(&head, ft_lstnew("amine"));
+//     ft_lstadd_front(&head, ft_lstnew("rouissy"));
+//     ft_lstadd_front(&head, ft_lstnew("Mohamed"));
+
+//     t_list *current = head;
+// 	int i = 0;
+// 	i = ft_lstsize(head);
+//     while (current)
+//     {
+//         printf("%s \n", (char *)current->content);
+//         current = current->next;
+//     }
+// 	printf("%d",i);
+
+//     return 0;
+// }
+
 int main()
 {
-    t_list *head = ft_lstnew("medd");
-    ft_lstadd_front(&head, ft_lstnew("amine"));
-    ft_lstadd_front(&head, ft_lstnew("rouissy"));
-    ft_lstadd_front(&head, ft_lstnew("Mohamed"));
-
-    t_list *current = head;
-	int i = 0;
-	i = ft_lstsize(head);
-    while (current)
-    {
-        printf("%s \n", (char *)current->content);
-        current = current->next;
-    }
-	printf("%d",i);
-
-    return 0;
+    ft_putnbr_fd(-11,1);
 }
-

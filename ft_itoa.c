@@ -6,7 +6,7 @@
 /*   By: mohamedaminerouissy <mohamedaminerouiss    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 17:35:08 by mrouissy          #+#    #+#             */
-/*   Updated: 2024/11/04 01:43:10 by mohamedamin      ###   ########.fr       */
+/*   Updated: 2024/11/05 13:32:41 by mohamedamin      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ char	*ft_itoa(int n)
 	{
 		ptr = alloc(11);
 		if(ptr)
-			ft_strlcpy(ptr,"-2147483648",11);
+			ft_strlcpy(ptr,"-2147483648",12);
 	}
 	else if (n > 0)
 	{

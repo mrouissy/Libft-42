@@ -47,7 +47,7 @@ bonus = ft_lstadd_front_bonus.c\
 		ft_lstsize_bonus.c\
 		main.c\
 
-OBJ = $(bonus:.c=.o)
+OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
